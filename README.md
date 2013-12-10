@@ -1,4 +1,4 @@
-drafter
-=======
+Muffin
+=========================
 
-Simple website projet for creating drafts
+Un petit site web pour recueillir les compétences de chacun.
