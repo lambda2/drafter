@@ -21,28 +21,14 @@ class Home extends Controller
 
     public function index ($params = array ())
     {
+        $quotes = Moon::getAll('c_quote');
+        $quote = array_rand($quotes);
+        $this->addData('quote', $quote);
         $this->render ();
     }
 
-    /**
-     * @PathInfo('login')
-     */
-    public function loginNew ($params = array ())
+    public function create ($params = array ())
     {
-        // On récupère le login fourni dans l'url
-        $login = $this->getUrlParam ('login');
-        $this->addData ('login', $login);
-        $this->render ();
-    }
-
-    /**
-     * @PathInfo('login')
-     */
-    public function loginExists ($params = array ())
-    {
-        // On récupère le login fourni dans l'url
-        $login = $this->getUrlParam ('login');
-        $this->addData ('login', $login);
         $this->render ();
     }
 
