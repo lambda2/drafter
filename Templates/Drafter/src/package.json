@@ -1,15 +1,14 @@
 {
-  "name": "Muffin",
-  "version": "1.1.4",
-  "description": "Un site collaboratif de partage de compétences",
+  "name": "Drafter",
+  "version": "1.0",
+  "description": "create and share drafts",
   "keywords": [
-    "collaboratif",
-    "partage",
-    "compétences",
-    "gateau"
+    "create",
+    "share",
+    "drafts"
   ],
-  "homepage": "https://github.com/lambda2/Muffin",
-  "bugs": "https://github.com/lambda2/Muffin/issues",
+  "homepage": "https://github.com/lambda2/drafter",
+  "bugs": "https://github.com/lambda2/drafter/issues",
   "author": {
     "name": "André Aubin",
     "email": "andre.aubin@lambdaweb.fr",
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lambda2/Muffin.git"
+    "url": "https://github.com/lambda2/drafter.git"
   },
   "licenses": [
     {
@@ -35,9 +34,6 @@
     "time-grunt": "~0.1.1"
   },
   "dependencies": {
-        "jquery": ">=1.7",
-        "jquery-smooth-scroll" : "https://github.com/kswedberg/jquery-smooth-scroll/tarball/master",
-        "jquery-Makeforms" : "https://github.com/lambda2/MakeForms/tarball/master",
-        "modal" : "https://github.com/drublic/css-modal/tarball/master"
+        "jquery": ">=1.7"
   }
 }

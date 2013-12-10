@@ -1,6 +1,5 @@
-/* Loading the fonts files from GWF */
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Fredoka+One|Leckerli+One");
-@import url("http://fonts.googleapis.com/css?family=Patua+One");
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto+Slab:400,700,300);
+
 
 
 /* On fait les resets standards */
@@ -9,7 +8,7 @@ button,
 input,
 select,
 textarea {
-    color: #73626E;
+    color: @drafter-green;
 }
 
 * {
@@ -22,22 +21,17 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Patua One', cursive;
+    font-family: 'Roboto Slab', serif;
     font-weight: 400;
-}
-
-/* La balise d'italique sera normale, mais utilisera une police différente: Leckerli */
-i {
-    font-style: normal;
-    font-family: 'Leckerli One', cursive;
+    color: @drafter-green;
 }
 
 body {
     font-size: 1em;
     line-height: 1.4;
-    background-color: #F7E4BE;
-    color: #413E4A;
-    font-family: 'Lato', sans-serif;
+    background-color: @body-bg;
+    color: @drafter-green;
+    font-family: 'Roboto Slab', serif;
 }
 
 ::-moz-selection {
@@ -80,51 +74,44 @@ textarea {
     padding: 0.2em 0;
 }
 
+a {
+    color: @drafter-dark-green;
+    text-decoration: none;
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
-body {
-    font: 16px/26px 'Lato', sans-serif;
-}
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
-.header-container {
-    height: 95px;
-    border-bottom: 20px solid rgba(158, 72, 56, 1);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 999;
-}
-
-.footer-container {
-    border-top: 20px solid rgba(158, 72, 56, 1);
-}
-
-.header-container,
-.footer-container
-{
-    background: #D95B43;
+    &:hover
+    {
+        color: lighten(@drafter-dark-green,5%);
+    }
 }
 
 .title {
-    color: #F7E4BE;
+    text-align: center;
+    color: @drafter-dark-green;
+    text-decoration: none;
+    font-size: 4em;
 }
 
 /* ==============
     MOBILE: Menu
    ============== */
+
+#draft-aera
+{
+    padding: 20px 5px;
+    border: 1px solid @text-color;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    width: 100%;
+    display: block;
+    min-height: 400px;
+    background-color: rgba(255,255,255,0.5);
+    transition: all 0.4s;
+
+    &:hover
+    {
+        background-color: rgba(255,255,255,0.9);
+    }
+}
 
 nav {
     ul {
@@ -141,7 +128,7 @@ nav {
         text-decoration: none;
         font-weight: bold;
 
-        color: #F7E4BE;
+        color: @drafter-light-green;
         background: #413E4A;
 
         &:hover,
@@ -163,7 +150,6 @@ nav {
    ============== */
 
 .main {
-    padding: 110px 0 160px 0px;
 
     article h1 {
         font-size: 2em;
@@ -171,7 +157,7 @@ nav {
     }
 
     aside {
-        color: #F7E4BE;
+        color: @drafter-light-green;
     }
 }
 
@@ -188,7 +174,7 @@ nav {
     }
 
     footer {
-        color: #F7E4BE;
+        color: @drafter-light-green;
         padding: 20px 0;
 
     }
@@ -412,7 +398,6 @@ input[type="text"]
 
 button
 {
-    color: #413E4A;
     border: none;
     background-color: transparent;
     vertical-align: sub;
@@ -434,9 +419,9 @@ input + button > span[class^="icon-"] {
 }
 
 .btn {
-    border: 2px solid @muffin-green;
-    background-color: @muffin-green;
-    color: #F7E4BE;
+    border: 2px solid @drafter-green;
+    background-color: @drafter-green;
+    color: @drafter-light-green;
     border-radius: 3px;
     height: 30px;
     margin: 0px 5px;
@@ -544,13 +529,13 @@ article[role="header"]
                 height: 70px;
                 margin: 10px 20px 10px 0px;
                 padding: 0px;
-                border: 5px solid  @muffin-red;
+                border: 5px solid  @drafter-red;
                 text-align: center;
                 font-size: 50px;
                 border-radius: 0px 10px 10px 10px;
                 line-height: 67px;
-                background: @muffin-red;
-                color: @muffin-yellow;
+                background: @drafter-red;
+                color: @drafter-light-green;
                 display: inline-block;
             }
         }
@@ -617,7 +602,7 @@ aside.side-menu
 
                 &:hover
                     {
-                    border-color: @muffin-green;
+                    border-color: @drafter-green;
                 }
             }
         }
@@ -669,10 +654,6 @@ div[role="add-competence"]
     }
 }
 
-p {
-    color: #887D72;
-}
-
 
 /* 
     ------------------------------------------------------------------------
@@ -692,7 +673,7 @@ p {
             float: right;
             font-size: 2em;
             line-height: 75px;
-            color: @muffin-orange-dark;
+            color: @drafter-orange-dark;
 
             &:hover
                 {
@@ -797,7 +778,7 @@ div[data-role="form-container"]
             }
 
             a.clear-all {
-                color: #F7E4BE;
+                color: @drafter-light-green;
                 position: relative;
                 top: 2px;
             }
@@ -811,7 +792,7 @@ div[data-role="form-container"]
             a.clear-all:hover,
                 a.want-to-learn:hover,
                 a.want-to-teach:hover {
-                color: #D95B43;
+                color: @drafter-orange;
             }
 
 
@@ -852,7 +833,7 @@ div[data-role="form-container"]
                 }
 
                 &:checked + label.want-to-learn:before{
-                    color: @muffin-orange-dark;
+                    color: @drafter-orange-dark;
                 }
 
                 &+label.want-to-teach:before{
@@ -878,12 +859,12 @@ div[data-role="form-container"]
                 }
 
                 & + label.want-to-teach:hover:before{
-                    color: @muffin-red;
+                    color: @drafter-red;
                 }
 
                 &:checked + label.want-to-teach:before{
                     content: "\ec02";
-                    color: @muffin-red;
+                    color: @drafter-red;
                 }
             }
 
@@ -896,7 +877,7 @@ div[data-role="form-container"]
 
                 &:checked + label[for$="med"]:before,
                     & + label[for$="med"]:hover:before {
-                    color: #D95B43;
+                    color: @drafter-orange;
                 }
 
                 &:checked + label[for$="high"]:before,
@@ -1043,11 +1024,6 @@ div[data-role="form-container"]
 
     .title {
         float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
     }
 }
 
