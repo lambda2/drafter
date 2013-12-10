@@ -7,7 +7,7 @@ js_path: "js/"
 img_path: "img/"
 
 css_includes:
-    - "Muffin.css"
+    - "Drafter.css"
 
 js_includes:
-    - "Muffin.js"
+    - "Drafter.js"

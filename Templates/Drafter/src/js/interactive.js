@@ -16,7 +16,52 @@
 
 (function($) {
 
+  function toggleFullScreen(elt) {
+    
+  }
+
 	window.drafter = {};
 
+	window.drafter.fscreen = function (element)
+	{
+  		var elt = document.getElementById("aera");
+
+		if ($(elt).hasClass("fullscreen"))
+		{
+			console.log("exitfullscreen");
+	    	$(elt).removeClass("fullscreen");
+	    	$('[data-action="fullscreen"]').html('<span class="icon-expand2"></span> <span class="legend">Full screen</span>');
+			if (document.mozCancelFullScreen !== undefined)
+		      {
+		        document.mozCancelFullScreen();
+		      }
+		      else
+		      {
+		        document.webkitCancelFullScreen();
+		      }
+		      return;
+		}
+		else if (!document.mozFullScreen && !document.webkitFullScreen)
+		{
+			console.log("fullscreen");
+	    	$(elt).addClass("fullscreen");
+
+	    	$('[data-action="fullscreen"]').html('<span class="icon-contract2"></span> <span class="legend">Normal screen</span>');
+	    	/*$('article#aera.fullscreen [data-action="fullscreen"]').unbind( "click" ).click(function()
+	    	{
+	    		window.drafter.fscreen(elt);
+	    	});*/
+
+		    if (elt.mozRequestFullScreen)
+		    {
+		      elt.mozRequestFullScreen();
+		    }
+		    else
+		    {
+		      elt.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+		    }
+			return;
+	    }
+	}
 
 })(jQuery);
